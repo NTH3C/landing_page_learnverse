@@ -1,105 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnVerse</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif; 
-            background-color: #8a2be2; 
-            color: #fff;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #8a2be2;
+        color: #fff;
+      }
 
-        header {
-            background-color: #8232cb; 
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      header {
+        background-color: #8232cb;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
 
-        .logo-container img {
-            max-width: 50px;
-            margin-right: 10px;
-        }
+      .logo-container img {
+        max-width: 50px;
+        margin-right: 10px;
+      }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
 
-        nav ul li {
-            margin-right: 20px; 
-        }
+      nav ul li {
+        margin-right: 20px;
+      }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; 
-            font-weight: bold;
-        }
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
 
-        li .TIO {
-            font-size: 1rem;
-            padding: 0.8em 2em;
-            background-color: #000;
-            border: 3px solid #8a2be2;
-            border-radius: 1em;
-            color: #fff;
-            font-weight: bolder;
-            transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-            box-shadow: -5px 5px 0px 0px #8a2be2;
-        }
+      li .TIO {
+        font-size: 1rem;
+        padding: 0.8em 2em;
+        background-color: #000;
+        border: 3px solid #8a2be2;
+        border-radius: 1em;
+        color: #fff;
+        font-weight: bolder;
+        transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+        box-shadow: -5px 5px 0px 0px #8a2be2;
+      }
+      .section1 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 100px;
+        display: flex;
+        align-items: center;
+      }
+      .imgApplication{
+        display: flex;
+        align-items: center;
+      }
+      .titleSlogan {
+        font-size: 128px;
+      }
 
-        .header-text {
-            margin-left: 50px;
-            font-size: 96px;
-            display: flex; 
-            align-items: center; 
-        }
+      .header-text span {
+        display: block;
+      }
 
-        .header-text span {
-            display: block;
-        }
+      .header-text img {
+        max-width: 300px;
+        margin-left: 20px;
+      }
 
-        .header-text img {
-            max-width: 300px;
-            margin-left: 20px; 
-        }
+      .header-buttons {
+        margin-top: 20px;
+        display: flex;
+      }
 
-        .header-buttons {
-            margin-top: 20px;
-            display: flex;
-        }
+      .header-buttons button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        font-size: 18px;
+      }
 
-        .header-buttons button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            font-size: 18px;
-        }
+      .header-buttons #apple-button {
+        background-color: #b6b6b6;
+        color: #fff;
+      }
 
-        .header-buttons #apple-button {
-            background-color: #b6b6b6;
-            color: #fff;
-        }
+      .header-buttons #google-button {
+        background-color: #4285f4;
+        color: #fff;
+      }
 
-        .header-buttons #google-button {
-            background-color: #4285f4;
-            color: #fff;
-        }
-
-        .playstore-button {
+      .playstore-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -110,66 +125,63 @@
         text-align: center;
         color: rgba(255, 255, 255, 1);
         outline: 0;
-        transition: all  .2s ease;
+        transition: all 0.2s ease;
         text-decoration: none;
         margin-left: 50px;
-        }
+      }
 
-        .playstore-button:hover {
+      .playstore-button:hover {
         background-color: transparent;
         color: rgba(0, 0, 0, 1);
-        }
+      }
 
-        .icon {
+      .icon {
         height: 1.5rem;
         width: 1.5rem;
-        }
+      }
 
-        .texts {
+      .texts {
         margin-left: 1rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         line-height: 1;
-        }
+      }
 
-        .text-1 {
+      .text-1 {
         margin-bottom: 0.25rem;
         font-size: 0.75rem;
         line-height: 1rem;
-        }
+      }
 
-        .text-2 {
+      .text-2 {
         font-weight: 600;
-        }
-
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="logo-container">
-            <img src="LearnVerse_logo.png" alt="LearnVerse Logo">
-            <span>LearnVerse</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#try-it-out" class="TIO">Try It Out</a></li>
-            </ul>
-        </nav>
+      <div class="logo-container">
+        <img src="LearnVerse_logo.png" alt="LearnVerse Logo" />
+        <span>LearnVerse</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#try-it-out" class="TIO">Try It Out</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <div class="header-text">
-        <span>Every day,<br>New Lesson,<br>New Adventure!</span>
-        <img src="telverse.png" alt="telverse">
-    </div>
-
-    <div class="header-buttons">
-        <a href="#" class="playstore-button">
+    <div class="section1">
+      <div class="header-text">
+        <span class="titleSlogan"
+          >Every day,<br />New Lesson,<br />New Adventure!</span
+        >
+        <div class="header-buttons">
+          <a href="#" class="playstore-button">
             <span class="icon">
               <svg
                 fill="currentcolor"
@@ -195,19 +207,31 @@
               <span class="text-2">App store</span>
             </span>
           </a>
-          
-        <a class="playstore-button" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 512 512">
-              <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+
+          <a class="playstore-button" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="icon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"
+              ></path>
             </svg>
             <span class="texts">
               <span class="text-1">GET IT ON</span>
               <span class="text-2">Google Play</span>
             </span>
           </a>
+        </div>
+      </div>
+      <div class="imgApplication">
+        <img src="telverse.png" alt="telverse"  >
+      </div>
+      <!-- /.imgApplication -->
+
     </div>
-
-
-</body>
-
+    <!-- /.section1 -->
+  </body>
 </html>
