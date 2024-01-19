@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnVerse</title>
     <style>
+        *{
+            overscroll-behavior-y: none ;
+        }
       body {
         margin: 0;
         padding: 0;
@@ -20,6 +23,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: #ffffff9c 0.5px solid;
       }
 
       .logo-container {
@@ -52,13 +56,17 @@
       li .TIO {
         font-size: 1rem;
         padding: 0.8em 2em;
-        background-color: #000;
-        border: 3px solid #8a2be2;
+        background-color: #8a2be2;
+        border: 3px solid #000;
         border-radius: 1em;
         color: #fff;
         font-weight: bolder;
         transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-        box-shadow: -5px 5px 0px 0px #8a2be2;
+        box-shadow: -5px 5px 0px 0px #000;
+      } 
+
+      li .TIO:hover {
+        transform: translate(5px, -5px);
       }
       .section1 {
         display: flex;
@@ -81,7 +89,7 @@
         align-items: center;
       }
       .titleSlogan {
-        font-size: 128px;
+        font-size: 15vh;
       }
 
       .header-text span {
@@ -89,13 +97,14 @@
       }
 
       .header-text img {
-        max-width: 300px;
+        max-width: 30vh;
         margin-left: 20px;
       }
 
       .header-buttons {
         margin-top: 20px;
         display: flex;
+        width: 110vh;
       }
 
       .header-buttons button {
@@ -157,6 +166,48 @@
       .text-2 {
         font-weight: 600;
       }
+
+      .section2{
+        width:100%;
+        height: 100vh;
+        background: linear-gradient(#8a2be2,#9198e5 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .desc{
+        width: 50%;
+        margin-left: 10vh;
+      }
+
+      .desc p{
+        font-size: x-large;
+      }
+
+      .desc2{
+        width: 50%;
+        margin-right: 10vh;
+      }
+
+      .desc2 p{
+        font-size: x-large;
+      }
+
+      .section3{
+        width:100%;
+        height: 100vh;
+        background: linear-gradient(#9198e5,#aeb3f0  );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer{
+        background-color: #000;
+        height: 10vh;
+      }
+
     </style>
   </head>
 
@@ -232,6 +283,41 @@
       <!-- /.imgApplication -->
 
     </div>
-    <!-- /.section1 -->
+    <section class="section2">
+        <img src="connect.png" alt="connect">
+        <div class="desc"><p>Bienvenue dans LearnVerse, votre compagnon quotidien pour l'enrichissement culturel ! 
+                Explorez chaque jour de nouvelles découvertes captivantes dans le monde de la culture grâce à 
+                notre application innovante. Que vous soyez passionné par l'art, la science, la littérature,
+                 la musique ou tout ce qui se trouve entre les deux, LearnVerse vous offre une expérience 
+                 unique d'apprentissage quotidien.</p></div>
+    </section>
+    <section class="section3">
+        <div class="desc2"><p>    📚 Découverte Quotidienne : Chaque jour, plongez dans une nouvelle surprise culturelle soigneusement
+             sélectionnée pour élargir vos horizons et stimuler votre curiosité. <br>
+
+            🎓 Multi-disciplinaire : De l'histoire à la technologie, en passant par la nature et les arts, LearnVerse vous offre 
+            une variété de sujets pour satisfaire votre soif de connaissances. <br>
+        
+            🌐 Contenu Authentique : Profitez de contenu de qualité créé par des experts et passionnés, conçu pour vous offrir une 
+            perspective unique sur le monde qui vous entoure. <br>
+        
+            🚀 Interaction Sociale : Partagez vos découvertes avec une communauté mondiale d'apprenants, échangez des idées et créez 
+            des discussions significatives. <br>
+        
+            📱 Accessible Partout : Apprenez à votre propre rythme, où que vous soyez, grâce à une interface conviviale et une 
+            disponibilité sur divers appareils mobiles. <br>
+        
+        Avec LearnVerse, transformez chaque journée en une aventure culturelle. Rejoignez-nous dans cette exploration passionnante 
+        du savoir ! Restez à l'affût des mises à jour alors que notre équipe travaille sans relâche pour apporter la meilleure 
+        expérience d'apprentissage culturel à portée de vos doigts.</p></div>
+            <img src="choosetheme.png" alt="choosetheme">
+    </section>
+    <footer>
+        <div class="logo-container">
+            <img src="LearnVerse_logo.png" alt="Learnverse">
+            <p>LearnVerse </p>
+            &copy;
+        </div>    
+    </footer>
   </body>
 </html>
