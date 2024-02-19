@@ -3,219 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ldp.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
     <title>LearnVerse</title>
-    <style>
-        *{
-            overscroll-behavior-y: none ;
-        }
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #8a2be2;
-        color: #fff;
-      }
-
-      header {
-        background-color: #8232cb;
-        color: #fff;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: #ffffff9c 0.5px solid;
-      }
-
-      .logo-container {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo-container img {
-        max-width: 50px;
-        margin-right: 10px;
-      }
-
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-
-      nav ul li {
-        margin-right: 20px;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-      }
-
-      li .TIO {
-        font-size: 1rem;
-        padding: 0.8em 2em;
-        background-color: #8a2be2;
-        border: 3px solid #000;
-        border-radius: 1em;
-        color: #fff;
-        font-weight: bolder;
-        transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-        box-shadow: -5px 5px 0px 0px #000;
-      } 
-
-      li .TIO:hover {
-        transform: translate(5px, -5px);
-      }
-      .section1 {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        width: 100%;
-        height: 100vh;
-      }
-      .header-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 50px;
-        margin-right: 100px;
-        display: flex;
-        align-items: center;
-      }
-      .imgApplication{
-        display: flex;
-        align-items: center;
-      }
-      .titleSlogan {
-        font-size: 15vh;
-      }
-
-      .header-text span {
-        display: block;
-      }
-
-      .header-text img {
-        max-width: 30vh;
-        margin-left: 20px;
-      }
-
-      .header-buttons {
-        margin-top: 20px;
-        display: flex;
-        width: 110vh;
-      }
-
-      .header-buttons button {
-        padding: 10px 20px;
-        margin-right: 10px;
-        font-size: 18px;
-      }
-
-      .header-buttons #apple-button {
-        background-color: #b6b6b6;
-        color: #fff;
-      }
-
-      .header-buttons #google-button {
-        background-color: #4285f4;
-        color: #fff;
-      }
-
-      .playstore-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid #000;
-        border-radius: 9999px;
-        background-color: rgba(0, 0, 0, 1);
-        padding: 0.625rem 1.5rem;
-        text-align: center;
-        color: rgba(255, 255, 255, 1);
-        outline: 0;
-        transition: all 0.2s ease;
-        text-decoration: none;
-        margin-left: 50px;
-      }
-
-      .playstore-button:hover {
-        background-color: transparent;
-        color: rgba(0, 0, 0, 1);
-      }
-
-      .icon {
-        height: 1.5rem;
-        width: 1.5rem;
-      }
-
-      .texts {
-        margin-left: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        line-height: 1;
-      }
-
-      .text-1 {
-        margin-bottom: 0.25rem;
-        font-size: 0.75rem;
-        line-height: 1rem;
-      }
-
-      .text-2 {
-        font-weight: 600;
-      }
-
-      .section2{
-        width:100%;
-        height: 100vh;
-        background: linear-gradient(#8a2be2,#9198e5 );
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .desc{
-        width: 50%;
-        margin-left: 10vh;
-      }
-
-      .desc p{
-        font-size: x-large;
-      }
-
-      .desc2{
-        width: 50%;
-        margin-right: 10vh;
-      }
-
-      .desc2 p{
-        font-size: x-large;
-      }
-
-      .section3{
-        width:100%;
-        height: 100vh;
-        background: linear-gradient(#9198e5,#aeb3f0  );
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer{
-        background-color: #000;
-        height: 10vh;
-      }
-
-    </style>
   </head>
 
   <body>
     <header>
       <div class="logo-container">
-        <img src="LearnVerse_logo.png" alt="LearnVerse Logo" />
-        <span>LearnVerse</span>
+        <a href="LandingPage.html"><img  src="LearnVerse_logo.png" alt="LearnVerse Logo" /></a>
+        <a href="LandingPage.html"><span>LearnVerse</span></a>
       </div>
       <nav>
         <ul>
@@ -228,9 +27,8 @@
     </header>
     <div class="section1">
       <div class="header-text">
-        <span class="titleSlogan"
-          >Every day,<br />New Lesson,<br />New Adventure!</span
-        >
+        <span class="titleSlogan">Every day,<br />New Lesson,<br />New Adventure!</span>
+
         <div class="header-buttons">
           <a href="#" class="playstore-button">
             <span class="icon">
@@ -284,40 +82,26 @@
 
     </div>
     <section class="section2">
-        <img src="connect.png" alt="connect">
-        <div class="desc"><p>Bienvenue dans LearnVerse, votre compagnon quotidien pour l'enrichissement culturel ! 
-                Explorez chaque jour de nouvelles découvertes captivantes dans le monde de la culture grâce à 
-                notre application innovante. Que vous soyez passionné par l'art, la science, la littérature,
-                 la musique ou tout ce qui se trouve entre les deux, LearnVerse vous offre une expérience 
-                 unique d'apprentissage quotidien.</p></div>
-    </section>
-    <section class="section3">
-        <div class="desc2"><p>    📚 Découverte Quotidienne : Chaque jour, plongez dans une nouvelle surprise culturelle soigneusement
-             sélectionnée pour élargir vos horizons et stimuler votre curiosité. <br>
-
-            🎓 Multi-disciplinaire : De l'histoire à la technologie, en passant par la nature et les arts, LearnVerse vous offre 
-            une variété de sujets pour satisfaire votre soif de connaissances. <br>
-        
-            🌐 Contenu Authentique : Profitez de contenu de qualité créé par des experts et passionnés, conçu pour vous offrir une 
-            perspective unique sur le monde qui vous entoure. <br>
-        
-            🚀 Interaction Sociale : Partagez vos découvertes avec une communauté mondiale d'apprenants, échangez des idées et créez 
-            des discussions significatives. <br>
-        
-            📱 Accessible Partout : Apprenez à votre propre rythme, où que vous soyez, grâce à une interface conviviale et une 
-            disponibilité sur divers appareils mobiles. <br>
-        
-        Avec LearnVerse, transformez chaque journée en une aventure culturelle. Rejoignez-nous dans cette exploration passionnante 
-        du savoir ! Restez à l'affût des mises à jour alors que notre équipe travaille sans relâche pour apporter la meilleure 
-        expérience d'apprentissage culturel à portée de vos doigts.</p></div>
-            <img src="choosetheme.png" alt="choosetheme">
-    </section>
+      <img src="connect.png" alt="connect" class="scrollImage1" id="scrollImage1">
+      <div class="desc"><p></p></div>
+  </section>
+  
+  <section class="section3">
+      <div class="desc2"><p></p></div>
+      <img src="choosetheme.png" alt="choosetheme" id="scrollImage2">
+  </section>
     <footer>
         <div class="logo-container">
             <img src="LearnVerse_logo.png" alt="Learnverse">
-            <p>LearnVerse </p>
-            &copy;
+            <nav>
+              <ul>
+                <li><a href="https://fr.wikipedia.org/wiki/Copyright">LearnVerse &copy;</a></li>
+                <li><a href="CGU.html">CGU</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </nav>
         </div>    
     </footer>
+    <script src="ldp.js"></script>
   </body>
 </html>
