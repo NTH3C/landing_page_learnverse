@@ -102,8 +102,8 @@ width: 110vh;
 
 .header-buttons button {
 padding: 10px 20px;
-margin-right: 10px;
-font-size: 18px;
+margin-right: 1vw;
+font-size: 3vh;
 }
 
 .header-buttons #apple-button {
@@ -217,4 +217,132 @@ text-align: center;
 a {
     text-decoration: none;
     color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Styles pour les écrans de taille moyenne ou plus petits */
+
+
+    .section1 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 75vh;
+        }
+
+    .section2 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 75vh;
+        }
+
+    .section3 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 75vh;
+        }
+
+    .telImage {
+        max-width: 14vh;
+    }
+    .scrollImage {
+        max-width: 18vh;
+    }
+
+    .titleSlogan {
+        font-size: 12vh;
+        }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-text {
+        margin: 0;
+        text-align: center;
+    }
+
+    .header-text img {
+        max-width: 50%;
+        margin-left: 0;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .header-buttons button {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles pour les écrans petits (par exemple, smartphones) */
+    
+    .section1 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 50vh;
+        }
+
+    .section2 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 50vh;
+        }
+
+    .section3 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 50vh;
+        }
+    
+    .telImage {
+        max-width: 12vh;
+    }
+
+    .scrollImage {
+        max-width: 16vh;
+    }
+
+    .titleSlogan {
+        font-size: 8vh;
+        }
+
+    .header-text {
+        margin: 0;
+        text-align: center;
+    }
+
+    .header-text img {
+        max-width: 50%;
+        margin-left: 0;
+    }
+
+    .playstore-button {
+        margin-left: 0;
+    }
+
+    .desc,
+    .desc2 {
+        width: 100%;
+        margin: 0;
+    }
 }
