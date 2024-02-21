@@ -25,12 +25,12 @@
         <section class="section">
             <div>
                 <h1>Contact</h1>
-                <div>
+                <form method="post">
                   <input type="email" name="email" id="email">
                   <input type="text" name="text" id="text">
                   <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
                   <input type="button" value="">
-                </div>
+                </form>
                 <?php
                   include 'database.php';
 
