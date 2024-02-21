@@ -25,36 +25,37 @@
         <section class="section">
             <div>
                 <h1>Contact</h1>
-                <div>
-                  <input type="email" name="" id="">
-                  <input type="text" name="" id="">
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                <form method="post">
+                  <input type="email" name="email" id="email">
+                  <input type="text" name="text" id="text">
+                  <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
                   <input type="button" value="">
-                </div>
+                </form>
                 <?php
-                  include 'connexion.php';
+                  include 'database.php';
 
                   $email = $_POST['email'];
                   $objet = $_POST['objet'];
                   $contenu = $_POST['contenu'];
 
-                  try {
-                      $conn = dataconnect();
+                  if (isset($_POST['email'])){
+                    try {
+                        $db = dataconnect();
 
-                      $stmt = $conn->prepare("INSERT INTO ContactClient (email, objet, contenu) VALUES (:email, :objet, :contenu)");
+                        $stmt = $db->prepare("INSERT INTO ContactClient (email, objet, contenu) VALUES (:email, :objet, :contenu)");
 
-                      $stmt->bindParam(':email', $email);
-                      $stmt->bindParam(':objet', $objet);
-                      $stmt->bindParam(':contenu', $contenu);
+                        $stmt->bindParam(':email', $email);
+                        $stmt->bindParam(':objet', $objet);
+                        $stmt->bindParam(':contenu', $contenu);
 
-                      $stmt->execute();
+                        $stmt->execute();
 
-                      echo "Enregistrement réussi !";
-                  } catch (PDOException $e) {
-                      echo "Erreur lors de l'enregistrement : " . $e->getMessage();
-                  } finally {
-                      $conn = null;
-                  }
+                        echo "Enregistrement réussi !";
+                    } catch (PDOException $e) {
+                        echo "Erreur lors de l'enregistrement : " . $e->getMessage();
+                    } finally {
+                        $conn = null;
+                    }}
                   ?>
             </div>
         </section>

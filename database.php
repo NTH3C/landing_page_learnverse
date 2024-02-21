@@ -3,7 +3,7 @@
 function dataconnect(): object{
 
     $dbname = 'u986688590_Learnverse';
-    $host = '127.0.0.1';
+    $host = '193.203.168.44';
     $dsn = "mysql:dbname=$dbname;host=$host;port=3306;charset=utf8";
 
 
