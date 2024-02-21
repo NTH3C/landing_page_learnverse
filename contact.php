@@ -25,11 +25,11 @@
         <section class="section">
             <div>
                 <h1>Contact</h1>
-                <form method="post">
+                <form action="" method="post" >
                   <input type="email" name="email" id="email">
                   <input type="text" name="text" id="text">
                   <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
-                  <input type="button" value="">
+                  <input type="submit" value="envoyer">
                 </form>
                 <?php
                   include 'database.php';
