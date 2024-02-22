@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php require_once('database.php') ?>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="ldp.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,14 +26,13 @@
         <section class="section">
             <div>
                 <h1>Contact</h1>
-                <form action="" method="post" >
+                  <form action="" method="post">
                   <input type="email" name="email" id="email">
-                  <input type="text" name="text" id="text">
+                  <input type="text" name="objet" id="text"> <!-- Modifiez le nom du champ texte -->
                   <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
                   <input type="submit" value="envoyer">
                 </form>
                 <?php
-                  include 'database.php';
 
                   $email = $_POST['email'];
                   $objet = $_POST['objet'];
@@ -54,7 +54,7 @@
                     } catch (PDOException $e) {
                         echo "Erreur lors de l'enregistrement : " . $e->getMessage();
                     } finally {
-                        $conn = null;
+                        $db = null;
                     }}
                   ?>
             </div>

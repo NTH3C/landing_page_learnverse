@@ -19,7 +19,8 @@ function dataconnect(): object{
         $pdo = new PDO($dsn, $user, $pass, $driver_options);
         return $pdo;
     } catch (PDOException $e) {
-        echo 'La connexion à la base de données a échouée.';
+        echo 'La connexion à la base de données a échoué. Erreur : ' . $e->getMessage();
     }
+    
 
 }
